@@ -1,0 +1,84 @@
+.header {
+  background-color: $bgr-color-main;
+}
+.header_container {
+  display: flex;
+  align-items: center;
+}
+.logo-link {
+  display: flex;
+  cursor: url(/src/images/cursor.png), auto;
+}
+.logo {
+  margin-left: 15px;
+  @include desktop {
+    margin-right: 265px;
+  }
+}
+.icon-favicon {
+  transition: fill $trans-duration $timing-function;
+
+  fill: $color-accent;
+}
+.header-nav {
+  display: none;
+  margin: 40px 0 40px;
+
+  @include desktop {
+    display: flex;
+  }
+  &__list {
+    display: flex;
+    gap: 27px;
+  }
+  // &__item {
+  // }
+  &__link {
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    padding: 40px 0 40px;
+
+    color: $text-color;
+    transition: color $trans-duration $timing-function;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+
+.icon-menu {
+  fill: #ffffff;
+}
+
+.header__button {
+  background-color: $color-accent;
+  width: 152px;
+  height: 42px;
+  display: none;
+  margin-left: 32px;
+  z-index: 4;
+  color: $timing-function $trans-duration;
+
+  @include tablet {
+    display: flex;
+  }
+  @include desktop {
+    margin-left: auto;
+  }
+  &:hover {
+    background-color: $btn-color-hover;
+  }
+  &:focus {
+    color: $text-color;
+    fill: $text-color;
+  }
+  &:disabled {
+    background-color: $btn-color-disabled;
+  }
+}
+.icon-vektra {
+  margin-left: 7px;
+}
